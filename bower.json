@@ -1,0 +1,26 @@
+{
+  "name": "ember-mousetrap",
+  "version": "0.0.1",
+  "authors": [
+    "ursm <ursm@ursm.jp>",
+    "hibariya <hibariya@gmail.com>"
+  ],
+  "description": "Mousetrap integration for Ember.js",
+  "main": "src/main.coffee",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "ember",
+    "mousetrap"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/idobata/ember-mousetrap",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
