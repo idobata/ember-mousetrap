@@ -22,5 +22,8 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "mousetrap": "~1.4.6"
+  }
 }
