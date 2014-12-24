@@ -15,7 +15,7 @@ define(
       return callback;
     }
 
-    if (Ember.EXTEND_PROTOTYPES) {
+    if (Ember.EXTEND_PROTOTYPES === true || Ember.EXTEND_PROTOTYPES.Function) {
       Function.prototype.mousetrap = function(keys, action) {
         return mousetrap(keys, action, this);
       };
