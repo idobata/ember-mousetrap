@@ -1,0 +1,32 @@
+{
+  "name": "ember-mousetrap",
+  "version": "0.0.1",
+  "description": "Mousetrap integration for Ember.js",
+  "main": "dist/cjs/index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "broccoli": "^0.13.3",
+    "broccoli-cli": "0.0.1",
+    "broccoli-dist-es6-module": "^0.2.1",
+    "broccoli-esnext": "^0.5.0",
+    "broccoli-static-compiler": "^0.2.1"
+  },
+  "scripts": {
+    "build": "rm -rf dist && broccoli build dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/idobata/ember-mousetrap.git"
+  },
+  "keywords": [
+    "ember",
+    "mousetrap"
+  ],
+  "author": "ursm",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/idobata/ember-mousetrap/issues"
+  },
+  "homepage": "https://github.com/idobata/ember-mousetrap"
+}

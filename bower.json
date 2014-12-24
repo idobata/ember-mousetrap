@@ -6,8 +6,11 @@
     "hibariya <hibariya@gmail.com>"
   ],
   "description": "Mousetrap integration for Ember.js",
-  "main": "src/main.coffee",
+  "main": "dist/globals/main.js",
   "moduleType": [
+    "es6",
+    "node",
+    "amd",
     "globals"
   ],
   "keywords": [

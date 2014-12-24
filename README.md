@@ -4,8 +4,12 @@
 
 ## Usage
 
+### ES6 module (ember-cli)
+
 ``` javascript
-App.FooRoute = Ember.Route.extend({
+import MousetrapRoute from 'ember-mousetrap/mixins/mousetrap-route';
+
+export default Ember.Route.extend(MousetrapRoute, {
   shortcuts: {
     // single keys
     foo: function() { highlight(2); }.mousetrap('4'),
@@ -30,6 +34,39 @@ App.FooRoute = Ember.Route.extend({
     mighty: function() {
       highlight([21, 22, 23]);
     }.mousetrap('up up down down left right left right b a enter')
+  }
+});
+```
+
+### Globals
+
+``` javascript
+App.FooRoute = Ember.Route.extend(EmberMousetrap.RouteMixin, {
+  shortcuts: {
+    // ...
+  }
+});
+```
+
+### Ember.EXTENDED_PROTOTYPES = false
+
+``` javascript
+import MousetrapRoute from 'ember-mousetrap/mixins/mousetrap-route';
+import mousetrap from 'ember-mousetrap/macros/mousetrap';
+
+export default Ember.Route.extend(MousetrapRoute, {
+  shortcuts: {
+    foo: mousetrap('4', function() { highlight(2); })
+  }
+});
+```
+
+or
+
+``` javascript
+App.FooRoute = Ember.Route.extend(EmberMousetrap.RouteMixin, {
+  shortcuts: {
+    foo: EmberMousetrap.mousetrap('4', function() { highlight(2); })
   }
 });
 ```
