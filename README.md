@@ -48,7 +48,7 @@ App.FooRoute = Ember.Route.extend(EmberMousetrap.RouteMixin, {
 });
 ```
 
-### Ember.EXTENDED_PROTOTYPES = false
+### Ember.EXTEND_PROTOTYPES = false
 
 ``` javascript
 import MousetrapRoute from 'ember-mousetrap/mixins/mousetrap-route';
