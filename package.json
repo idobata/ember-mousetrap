@@ -1,6 +1,6 @@
 {
   "name": "ember-mousetrap",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Mousetrap integration for Ember.js",
   "main": "dist/cjs/index.js",
   "dependencies": {},
