@@ -17,13 +17,13 @@ export default Ember.Route.extend(MousetrapRoute, {
 
     // combinations
     baz: function(e) {
-     highlight([6, 7, 8, 9]);
-     return false;
+      highlight([6, 7, 8, 9]);
+      return false;
     }.mousetrap('command+shift+k'),
 
     qux: function(e) {
-     highlight([11, 12, 13, 14]);
-     return false;
+      highlight([11, 12, 13, 14]);
+      return false;
     }.mousetrap(['command+k', 'ctrl+k']),
 
     // gmail style sequences
