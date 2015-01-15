@@ -1,32 +1,18 @@
 {
   "name": "ember-mousetrap",
-  "version": "0.0.4",
-  "authors": [
-    "ursm <ursm@ursm.jp>",
-    "hibariya <hibariya@gmail.com>"
-  ],
-  "description": "Mousetrap integration for Ember.js",
-  "main": "dist/globals/main.js",
-  "moduleType": [
-    "es6",
-    "node",
-    "amd",
-    "globals"
-  ],
-  "keywords": [
-    "ember",
-    "mousetrap"
-  ],
-  "license": "MIT",
-  "homepage": "https://github.com/idobata/ember-mousetrap",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
   "dependencies": {
+    "handlebars": "~2.0.0",
+    "jquery": "^2.1.3",
+    "ember": "1.9.1",
+    "ember-data": "1.0.0-beta.14.1",
+    "ember-resolver": "~0.1.11",
+    "loader.js": "ember-cli/loader.js#1.0.1",
+    "ember-cli-shims": "ember-cli/ember-cli-shims#0.0.3",
+    "ember-cli-test-loader": "rwjblue/ember-cli-test-loader#0.0.4",
+    "ember-load-initializers": "ember-cli/ember-load-initializers#0.0.2",
+    "ember-qunit": "0.1.8",
+    "ember-qunit-notifications": "0.0.4",
+    "qunit": "~1.15.0",
     "mousetrap": "~1.4.6"
   }
 }

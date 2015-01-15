@@ -2,9 +2,13 @@
 
 [Mousetrap](http://craig.is/killing/mice) integration for Ember.js.
 
-## Usage
+## Installation
 
-### ES6 module (ember-cli)
+``` sh
+$ ember install:npm ember-mousetrap
+```
+
+## Usage
 
 ``` javascript
 import MousetrapRoute from 'ember-mousetrap/mixins/mousetrap-route';
@@ -38,16 +42,6 @@ export default Ember.Route.extend(MousetrapRoute, {
 });
 ```
 
-### Globals
-
-``` javascript
-App.FooRoute = Ember.Route.extend(EmberMousetrap.RouteMixin, {
-  shortcuts: {
-    // ...
-  }
-});
-```
-
 ### Ember.EXTEND_PROTOTYPES = false
 
 ``` javascript
@@ -57,16 +51,6 @@ import mousetrap from 'ember-mousetrap/macros/mousetrap';
 export default Ember.Route.extend(MousetrapRoute, {
   shortcuts: {
     foo: mousetrap('4', function() { highlight(2); })
-  }
-});
-```
-
-or
-
-``` javascript
-App.FooRoute = Ember.Route.extend(EmberMousetrap.RouteMixin, {
-  shortcuts: {
-    foo: EmberMousetrap.mousetrap('4', function() { highlight(2); })
   }
 });
 ```
