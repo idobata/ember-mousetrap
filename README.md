@@ -11,46 +11,33 @@ $ ember install:npm ember-mousetrap
 ## Usage
 
 ``` javascript
-import MousetrapRoute from 'ember-mousetrap/mixins/mousetrap-route';
+import { MousetrapRoute, mousetrap } from 'ember-mousetrap';
 
 export default Ember.Route.extend(MousetrapRoute, {
   shortcuts: {
     // single keys
-    foo: function() { highlight(2); }.mousetrap('4'),
-    bar: function() { highlight(3); }.mousetrap('x', 'keyup'),
+    foo: mousetrap('4', function() { highlight(2); }),
+    bar: mousetrap('x', 'keyup', function() { highlight(3); }),
 
     // combinations
-    baz: function(e) {
+    baz: mousetrap('command+shift+k', function(e) {
       highlight([6, 7, 8, 9]);
       return false;
-    }.mousetrap('command+shift+k'),
+    }),
 
-    qux: function(e) {
+    qux: mousetrap(['command+k', 'ctrl+k'], function(e) {
       highlight([11, 12, 13, 14]);
       return false;
-    }.mousetrap(['command+k', 'ctrl+k']),
+    }),
 
     // gmail style sequences
-    foobar: function() { highlight(17); }).mousetrap('g i'),
-    foobaz: function() { highlight(18); }).mousetrap('* a'),
+    foobar: mousetrap('g i', function() { highlight(17); }),
+    foobaz: mousetrap('* a', function() { highlight(18); }),
 
     // konami code!
-    mighty: function() {
+    mighty: mousetrap('up up down down left right left right b a enter', function() {
       highlight([21, 22, 23]);
-    }.mousetrap('up up down down left right left right b a enter')
-  }
-});
-```
-
-### Ember.EXTEND_PROTOTYPES = false
-
-``` javascript
-import MousetrapRoute from 'ember-mousetrap/mixins/mousetrap-route';
-import mousetrap from 'ember-mousetrap/macros/mousetrap';
-
-export default Ember.Route.extend(MousetrapRoute, {
-  shortcuts: {
-    foo: mousetrap('4', function() { highlight(2); })
+    })
   }
 });
 ```
