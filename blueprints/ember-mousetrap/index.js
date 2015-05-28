@@ -1,10 +1,9 @@
 module.exports = {
-  name: 'ember-mousetrap',
+  normalizeEntityName: function() {
+    // do nothing
+  },
 
   afterInstall: function() {
-    return this.addBowerPackageToProject({
-      name:    'mousetrap',
-      version: '^1.4.6'
-    });
+    return this.addBowerPackageToProject('mousetrap');
   }
 };

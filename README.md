@@ -5,7 +5,7 @@
 ## Installation
 
 ``` sh
-$ ember install:npm ember-mousetrap
+$ ember install ember-mousetrap
 ```
 
 ## Usage
