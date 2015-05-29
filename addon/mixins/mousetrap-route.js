@@ -3,7 +3,7 @@ import Ember from 'ember';
 export default Ember.Mixin.create({
   mergedProperties: ['shortcuts'],
 
-  mousetrapBindKeys: Ember.on('activate', function() {
+  activate: function() {
     if (!this.shortcuts) return;
 
     Ember.keys(this.shortcuts).forEach(function(key) {
@@ -18,7 +18,7 @@ export default Ember.Mixin.create({
     }, this);
   }),
 
-  mousetrapUnbindKeys: Ember.on('deactivate', function() {
+  deactivate: function() {
     if (!this.shortcuts) return;
 
     Ember.keys(this.shortcuts).forEach(function(key) {
