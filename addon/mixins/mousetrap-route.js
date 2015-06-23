@@ -4,12 +4,12 @@ export default Ember.Mixin.create({
   mergedProperties: ['shortcuts'],
 
   mousetrapBindKeys: Ember.on('activate', function() {
-    if (!this.shortcuts) return;
+    if (!this.shortcuts) { return; }
 
     Ember.keys(this.shortcuts).forEach(function(key) {
       var callback = this.shortcuts[key];
 
-      if (!callback.__ember_mousetrap__) return;
+      if (!callback.__ember_mousetrap__) { return; }
 
       var keys   = callback.__ember_mousetrap__.keys;
       var action = callback.__ember_mousetrap__.action;
@@ -19,12 +19,12 @@ export default Ember.Mixin.create({
   }),
 
   mousetrapUnbindKeys: Ember.on('deactivate', function() {
-    if (!this.shortcuts) return;
+    if (!this.shortcuts) { return; }
 
     Ember.keys(this.shortcuts).forEach(function(key) {
       var callback = this.shortcuts[key];
 
-      if (!callback.__ember_mousetrap__) return;
+      if (!callback.__ember_mousetrap__) { return; }
 
       var keys = callback.__ember_mousetrap__.keys;
 
