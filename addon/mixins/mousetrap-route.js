@@ -6,7 +6,7 @@ export default Ember.Mixin.create({
   mousetrapBindKeys: Ember.on('activate', function() {
     if (!this.shortcuts) { return; }
 
-    Ember.keys(this.shortcuts).forEach(function(key) {
+    Object.keys(this.shortcuts).forEach(function(key) {
       var callback = this.shortcuts[key];
 
       if (!callback.__ember_mousetrap__) { return; }
@@ -21,7 +21,7 @@ export default Ember.Mixin.create({
   mousetrapUnbindKeys: Ember.on('deactivate', function() {
     if (!this.shortcuts) { return; }
 
-    Ember.keys(this.shortcuts).forEach(function(key) {
+    Object.keys(this.shortcuts).forEach(function(key) {
       var callback = this.shortcuts[key];
 
       if (!callback.__ember_mousetrap__) { return; }
