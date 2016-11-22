@@ -4,7 +4,7 @@ export default Ember.Mixin.create({
   mergedProperties: ['shortcuts'],
 
   mousetrapBindKeys: Ember.on('activate', function() {
-    if (typeof FastBoot !== undefined || !this.shortcuts) { return; }
+    if (typeof FastBoot !== 'undefined' || !this.shortcuts) { return; }
 
     Object.keys(this.shortcuts).forEach(function(key) {
       var callback = this.shortcuts[key];
@@ -19,7 +19,7 @@ export default Ember.Mixin.create({
   }),
 
   mousetrapUnbindKeys: Ember.on('deactivate', function() {
-    if (typeof FastBoot !== undefined || !this.shortcuts) { return; }
+    if (typeof FastBoot !== 'undefined' || !this.shortcuts) { return; }
 
     Object.keys(this.shortcuts).forEach(function(key) {
       var callback = this.shortcuts[key];
