@@ -1,9 +1,11 @@
-import Ember from 'ember';
+import Mixin from '@ember/object/mixin';
+import Mousetrap from 'mousetrap';
+import { on } from '@ember/object/evented';
 
-export default Ember.Mixin.create({
+export default Mixin.create({
   mergedProperties: ['shortcuts'],
 
-  mousetrapBindKeys: Ember.on('activate', function() {
+  mousetrapBindKeys: on('activate', function() {
     if (typeof FastBoot !== 'undefined' || !this.shortcuts) { return; }
 
     Object.keys(this.shortcuts).forEach(function(key) {
@@ -18,7 +20,7 @@ export default Ember.Mixin.create({
     }, this);
   }),
 
-  mousetrapUnbindKeys: Ember.on('deactivate', function() {
+  mousetrapUnbindKeys: on('deactivate', function() {
     if (typeof FastBoot !== 'undefined' || !this.shortcuts) { return; }
 
     Object.keys(this.shortcuts).forEach(function(key) {

@@ -2,13 +2,24 @@
 
 [Mousetrap](http://craig.is/killing/mice) integration for Ember.js.
 
-## Installation
+Compatibility
+------------------------------------------------------------------------------
 
-``` sh
-$ ember install ember-mousetrap
+* Ember.js v2.18 or above
+* Ember CLI v2.13 or above
+* Node.js v8 or above
+
+
+Installation
+------------------------------------------------------------------------------
+
+```
+ember install ember-mousetrap
 ```
 
-## Usage
+
+Usage
+------------------------------------------------------------------------------
 
 ``` javascript
 import { MousetrapRoute, mousetrap } from 'ember-mousetrap';
@@ -41,3 +52,15 @@ export default Ember.Route.extend(MousetrapRoute, {
   }
 });
 ```
+
+
+Contributing
+------------------------------------------------------------------------------
+
+See the [Contributing](CONTRIBUTING.md) guide for details.
+
+
+License
+------------------------------------------------------------------------------
+
+This project is licensed under the [MIT License](LICENSE.md).
